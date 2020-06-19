@@ -1,4 +1,4 @@
-# secretWord
+# guessTheWord
 
             string secretWord = Console.ReadLine();
             string guess = "";
