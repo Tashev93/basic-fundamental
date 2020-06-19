@@ -1,8 +1,9 @@
 # passwordGenerator
 
-
-                int n = int.Parse(Console.ReadLine());
-                int l = int.Parse(Console.ReadLine());
+            Console.Write("Enter a number: ");
+            int n = int.Parse(Console.ReadLine());
+            Console.Write("Enter a number: ");
+            int l = int.Parse(Console.ReadLine());
 
 
 
