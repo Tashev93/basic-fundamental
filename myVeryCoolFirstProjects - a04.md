@@ -1,49 +1,52 @@
 # coins
 
- double coins = double.Parse(Console.ReadLine());
-            double allCoins = coins * 100;
-            int coinsCount = 0;
-            while (allCoins >= 1)
+      double coinsInput = double.Parse(Console.ReadLine());
+            double coinCount = 0;
+            double coins = coinsInput * 100;
+            while (coins >= 1)
             {
-                if (allCoins >= 200)
+                coinCount++;
+                if(coins >= 200)
                 {
-                    allCoins -= 200;
-                    coinsCount++;
+                    double num = Math.Floor(coins / 100);
+                    double twoCoinsCount = Math.Floor(num / 2);
+                    double rem = num % 2;
+
+                    coinCount += twoCoinsCount;
+                    coinCount--;
+
+                    coins %= 100;
+                    coins = coins + (rem * 100);
+
                 }
-                else if (allCoins >= 100)
+                else if (coins >= 100)
                 {
-                    allCoins -= 100;
-                    coinsCount++;
+                    coins -= 100;
                 }
-                else if (allCoins >= 50)
+                else if (coins >= 50)
                 {
-                    allCoins -= 50;
-                    coinsCount++;
+                    coins -= 50;
                 }
-                else if (allCoins >= 20)
+                else if (coins >= 20)
                 {
-                    allCoins -= 20;
-                    coinsCount++;
+                    coins -= 20;
                 }
-                else if (allCoins >= 10)
+                else if (coins >= 10)
                 {
-                    allCoins -= 10;
-                    coinsCount++;
+                    coins -= 10;
                 }
-                else if (allCoins >= 5)
+                else if (coins >= 5)
                 {
-                    allCoins -= 5;
-                    coinsCount++;
+                    coins -= 5;
                 }
-                else if (allCoins >= 2)
+                else if (coins >= 2)
                 {
-                    allCoins -= 2;
-                    coinsCount++;
+                    coins -= 2;
                 }
-                else if (allCoins >= 1)
+                else if (coins >= 1)
                 {
-                    allCoins -= 1;
-                    coinsCount++;
+                    coins -= 1;
                 }
+
             }
-            Console.WriteLine(coinsCount);
+            Console.WriteLine(coinCount);
