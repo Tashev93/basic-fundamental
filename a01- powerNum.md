@@ -1,7 +1,8 @@
 # powerNum
 
-
+            Console.Write("Enter baseNum: ");
             int a = int.Parse(Console.ReadLine());
+            Console.Write("Enter powNum: ");
             int b = int.Parse(Console.ReadLine());
      
                 Console.WriteLine(GetPow(a, b));
