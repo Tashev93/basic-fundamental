@@ -1,12 +1,12 @@
 # coins
 
-      double coinsInput = double.Parse(Console.ReadLine());
+            double coinsInput = double.Parse(Console.ReadLine());
             double coinCount = 0;
             double coins = coinsInput * 100;
             while (coins >= 1)
             {
                 coinCount++;
-                if(coins >= 200)
+                if (coins >= 200)
                 {
                     double num = Math.Floor(coins / 100);
                     double twoCoinsCount = Math.Floor(num / 2);
